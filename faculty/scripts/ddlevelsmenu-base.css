@@ -1,0 +1,11 @@
+.ddsubmenustyle {Z-INDEX: 100; BORDER-BOTTOM: #757575 1px solid; POSITION: absolute; BORDER-LEFT: #757575 1px solid; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px 0px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 11px ; VISIBILITY: hidden; BORDER-TOP: #000 0px solid; TOP: 0px; BORDER-RIGHT: #757575 1px solid; PADDING-TOP: 0px; LEFT: 0px; background-color:#366ba1;}
+
+.ddsubmenustyle UL {Z-INDEX: 100; BORDER-BOTTOM: #757575 1px solid; POSITION: absolute; border-radius:8px; BORDER-LEFT: #757575 1px solid; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 11px ; VISIBILITY: hidden; BORDER-TOP: #000 0px solid; TOP: 0px; BORDER-RIGHT: #757575 1px solid; PADDING-TOP: 0px; LEFT: 0px;}
+
+.ddsubmenustyle LI A {BORDER-BOTTOM: #000 1px dashed; PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; WIDTH: 150px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #000; TEXT-DECORATION: none; PADDING-TOP: 4px; font-size:13px; margin-left:7px; text-align:left;}
+
+* HTML .ddsubmenustyle LI {WIDTH: 170px; DISPLAY: inline-block;}
+.ddsubmenustyle LI A:hover {BACKGROUND-COLOR: #fff; COLOR: #366ba1; border-color: #366ba1}
+.downarrowpointer {BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-LEFT: 4px; BORDER-TOP: 0px; BORDER-RIGHT: 0px;}
+.rightarrowpointer {BORDER-BOTTOM: 0px; POSITION: absolute; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 3px; LEFT: 100px;}
+.ddiframeshim {Z-INDEX: 500; POSITION: absolute; BORDER-RIGHT-WIDTH: 0px; WIDTH: 0px; DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 0px; BORDER-LEFT-WIDTH: 0px;}

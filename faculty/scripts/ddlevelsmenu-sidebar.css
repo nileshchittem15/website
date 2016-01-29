@@ -1,0 +1,11 @@
+.markermenu {POSITION: relative; WIDTH: 175px; CLEAR: left;}
+.markermenu UL {BORDER-BOTTOM: #9a9a9a 1px solid; BORDER-LEFT: #9a9a9a 1px solid; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 5px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #9a9a9a 1px solid; BORDER-RIGHT: #9a9a9a 1px solid; PADDING-TOP: 0px
+}
+.markermenu UL LI A {BORDER-BOTTOM: #b5b5b5 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 20px; WIDTH: auto; PADDING-RIGHT: 0px; DISPLAY: block; FONT: normal 11px arial; COLOR: #00014e; TEXT-DECORATION: none; PADDING-TOP: 3px}
+* HTML .markermenu UL LI A {WIDTH: 155px;}
+.markermenu UL LI A:visited {COLOR: #00014e;}
+.markermenu UL LI A:active {COLOR: #00014e;}
+.markermenu UL LI A:hover {BACKGROUND-COLOR: black; COLOR: white;}
+.markermenu UL LI A.selected {BACKGROUND-COLOR: black; COLOR: white;}
+.blackwhite LI A {BACKGROUND: white;}
+.blackwhite LI A:hover {BACKGROUND: black; COLOR: white;}
