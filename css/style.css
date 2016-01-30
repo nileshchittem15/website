@@ -30,7 +30,7 @@ textarea { overflow:hidden; }
 .right, .alignright { float: right; display: inline; }
 
 
-.shell { width: 900px; margin: 0 auto;}
+.shell { width: 80%; margin: 0 auto;}
 
 #header { height: 93px; }
 #logo { font-size: 25px; line-height: 22px; padding: 19px 0 0 0; }
