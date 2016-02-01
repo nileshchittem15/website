@@ -8638,7 +8638,8 @@ h2.widgettitle {
   position: relative;
   width: 262px; }
   @media (max-width: 1199px) {
-    .card-row-image {
+    .card-row-image,
+    .card-row-image img {
       width: 100%; } }
 
 .card-row-body {
@@ -10895,4 +10896,9 @@ ol li {
 .gap{
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.card-row-image img{
+  max-height: 200px;
+  width: 200px;
 }
