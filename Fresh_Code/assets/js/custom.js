@@ -213,7 +213,7 @@ $(document).ready(function() {
     /**
      * Chart
      */
-     if ($('#superlist-chart').length !== 0) {
+     if ($('#iiitdm-chart').length !== 0) {
         var counter = 0;
         var increase = Math.PI * 2 / 100;
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
           counter += increase;
         }
 
-    	var plot = $.plot($('#superlist-chart'),[
+    	var plot = $.plot($('#iiitdm-chart'),[
             {
                 color: '#ceb65f',
         		data: fun1
