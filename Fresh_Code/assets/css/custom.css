@@ -7324,7 +7324,7 @@ ul.dropdown-menu li a {
     margin-left: 10px;
     vertical-align: 2px; }
   .header-nav-primary.nav > li > a {
-    padding: 20px 17px; }
+    padding: 15px 10px; }
   .header-nav-primary.nav > li:last-child > a {
     padding-right: 0px; }
 
@@ -10902,3 +10902,7 @@ ol li {
   max-height: 200px;
   width: 200px;
 }
+
+.second-header > li > a {
+    padding: 20px 15px !important; }
+
