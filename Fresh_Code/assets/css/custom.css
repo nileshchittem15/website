@@ -10946,4 +10946,5 @@ ol li {
 
 .second-header .nav > li:hover > a{
   color: white !important;
+  text-decoration: underline;
 }
