@@ -1102,7 +1102,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.42857;
   color: #333333;
   background-color: #fff; }
@@ -7138,8 +7138,10 @@ ul.dropdown-menu li a {
         .header-content .nav > li > a {
           border-radius: 0px;
           color: white;
-          font-size: 14px;
-          padding: 6px 20px; }
+          font-size: 15px;
+          padding: 6px 20px; 
+		  
+		  }
           .header-minimal .header-content .nav > li > a {
             padding: 31px 20px; }
           .header-transparent .header-content .nav > li > a {
@@ -7326,10 +7328,10 @@ ul.dropdown-menu li a {
   padding: 0px; }
   .header-nav-primary.nav .fa {
     font-size: 8px;
-    margin-left: 10px;
+    margin-left: 5px;
     vertical-align: 2px; }
   .header-nav-primary.nav > li > a {
-    padding: 15px 10px; }
+    padding: 15px 8px; }
   .header-nav-primary.nav > li:last-child > a {
     padding-right: 0px; }
 
@@ -7564,7 +7566,8 @@ ul.dropdown-menu li a {
 .footer-bottom {
   /*background-color: #363636;*/
   background-image: url('../img/footer/footer.jpg');
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: #fff;
   font-size: 13px;
   padding: 35px 0px; }
@@ -7610,7 +7613,9 @@ h2.widgettitle {
   font-weight: 300;
   line-height: 60px;
   margin: 0px 0px 30px 0px;
-  padding: 0px; }
+  padding: 0px; 
+  
+}
 
 .widget {
   margin-bottom: 30px; }
@@ -7624,7 +7629,9 @@ h2.widgettitle {
       line-height: 26px;
       display: block;
       padding: 7px 0px;
-      transition: all 0.15s linear; }
+      transition: all 0.15s linear;
+	   font-size:15px !important;
+	}
       .widget .menu li a:hover {
         color: #009f8b;
         padding-left: 0px;
@@ -8454,7 +8461,7 @@ h2.widgettitle {
   background-color: #337ab7; /*#c6af5c;*/
   color: #fff;
   left: 50%;
-  font-size: 14px;
+  font-size: 16px;
   padding: 3px 15px;
   position: absolute;
   top: 0px;
@@ -10670,7 +10677,7 @@ h1 {
   font-size: 30px; }
 
 h2 {
-  font-size: 26px; }
+  font-size: 25px; }
 
 h3 {
   font-size: 22px; }
@@ -10868,7 +10875,7 @@ ol li {
 
 .img-small{
   width: 100%;
-  height: 150px;
+  height: 140px;
 }
 
 .description{
@@ -10918,6 +10925,7 @@ ol li {
 
 .card-content .menu li a{
   border-bottom: none;
+  	font-size:16px !important;
 }
 
 .light-green{
@@ -10943,12 +10951,12 @@ ol li {
 }
 
 .second-header .nav-pills > li > a{
-  padding: 15px 15px;
+  padding: 10px 15px;
   border-right: 1px solid white;
 }
 
 .second-header .nav-pills > li:last-child > a{
-  padding: 15px 15px;
+  padding: 10px 15px;
 }
 
 .second-header .nav-pills > li:hover{
@@ -10993,4 +11001,21 @@ ol li {
 .footer .menu li a:hover{
   color: rgb(125, 125,125);
   font-size: 15px;
+}
+.shadow {
+	box-shadow: 2px 2px 11px 1px rgb(213,215,254);
+  padding: 10px;
+}
+.mt20{
+	margin-top:20px !important;
+}
+.mb20{
+	margin-bottom:20px !important;
+}
+
+.bg-blue{
+  padding-right: 25px !important;
+  padding-left: 0px !important;
+  background-color: #356AA0;
+  color:white !important;
 }
