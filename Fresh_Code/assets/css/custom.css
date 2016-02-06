@@ -7150,7 +7150,7 @@ ul.dropdown-menu li a {
         .header-content .nav > li > a {
           border-radius: 0px;
           color: white;
-          font-size: 15px;
+          font-size: 16px;
           padding: 6px 20px; 
 		  
 		  }
@@ -7197,7 +7197,7 @@ ul.dropdown-menu li a {
               /*color: rgba(54, 54, 54, 0.6);*/
               color: #fff;
               display: block;
-              font-size: 12px;
+              font-size: 13px;
               padding: 10px 20px;
               text-transform: uppercase;
               transition: all 0.15s linear;
@@ -7639,10 +7639,10 @@ h2.widgettitle {
     padding: 0px; }
     .widget .menu li a {
       border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-      color: rgba(54, 54, 54, 1 );
+      color: #363636;
       line-height: 26px;
       display: block;
-      padding: 7px 0px;
+      padding: 5px 0px;
       transition: all 0.15s linear;
 	   font-size:15px !important;
 	}
@@ -8401,13 +8401,16 @@ h2.widgettitle {
   width: 100%; }
 
 .card-content {
-  left: 50%;
-  padding: 0px 30px;
-  padding-top: 30px;
-  position: absolute;
+  /*left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);*/
+  padding: 0px 30px;
+  padding-top: 20px;
+  margin-top: 30px;
+  height: inherit;
+  overflow-y: auto;
+  position: absolute;
   transition: all ease 0.35s;
   width: 100%;
   z-index: 2; }
@@ -8800,9 +8803,11 @@ h2.widgettitle {
     font-size: 12px;
     margin: 7px 0px 30px 0px !important; }
 
+.cards-small{
+  padding-bottom: 40px;
+}
 .card-small {
-  background-color: #fff;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 10px; }
   .card-small:before,
   .card-small:after {
@@ -8814,13 +8819,13 @@ h2.widgettitle {
 .card-small-image {
   float: left; }
   .card-small-image img {
-    width: 80px; }
+    width: 45px; }
 
 .card-small-content {
-  margin-left: 90px; }
+  margin-left: 60px; }
   .card-small-content h3 {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     margin: 0px 0px 0px 0px;
     padding: 0px;
@@ -8828,12 +8833,15 @@ h2.widgettitle {
     text-overflow: ellipsis;
     white-space: nowrap; }
     .card-small-content h3 a {
-      color: #444; }
+      color: #444;
+      float:left; }
   .card-small-content h4 {
-    font-size: 11px;
+    font-size: 12px;
     margin: 5px 0px 0px 0px; }
     .card-small-content h4 a {
-      color: rgba(54, 54, 54, 0.6); }
+      color: rgba(54, 54, 54, 0.6);
+      float: left;
+      text-align: left; }
 
 .card-small-price {
   color: #009f8b;
@@ -10890,7 +10898,7 @@ ol li {
 .no-padding{
   padding-left: 0px;
   padding-right: 0px;
-  padding-top: 25px;
+  padding-top: 0px;
 }
 
 .img-small{
@@ -10946,7 +10954,7 @@ ol li {
 
 .card-content .menu li a{
   border-bottom: none;
-  font-size:16px !important;
+  font-size:15px !important;
   display: inline-block;
 }
 
@@ -10968,17 +10976,17 @@ ol li {
 
 .second-header .nav-pills > li{
   background-color: #356AA0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .second-header .nav-pills > li > a{
-  padding: 10px 15px;
+  padding: 4px 15px;
   border-right: 1px solid white;
 }
 
 .second-header .nav-pills > li:last-child > a{
-  padding: 10px 15px;
+  padding: 4px 15px;
 }
 
 .second-header .nav-pills > li:hover{
