@@ -7639,7 +7639,7 @@ h2.widgettitle {
     padding: 0px; }
     .widget .menu li a {
       border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-      color: rgba(54, 54, 54, 0.6);
+      color: rgba(54, 54, 54, 1 );
       line-height: 26px;
       display: block;
       padding: 7px 0px;
@@ -8352,8 +8352,8 @@ h2.widgettitle {
   margin-bottom: -30px; }
 
 .card {
-  background-size: cover;
-  background-position: center center;
+  background-size: 100% 82%;
+  background-position: center 28px;
   background-repeat: no-repeat;
   height: 350px;
   margin: 0px 0px 30px 0px;
@@ -8479,7 +8479,7 @@ h2.widgettitle {
   padding: 3px 15px;
   position: absolute;
   top: 0px;
-  width:100%;
+  width:101%;
   font-weight: 600;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -9056,7 +9056,7 @@ h2.widgettitle {
       .post-content h2 a:hover {
         color: #009f8b; }
   .post-content p {
-    color: rgba(54, 54, 54, 0.6);
+    color: rgba(54, 54, 54, 1);
     margin: 0px;
     line-height: 20px; }
 
@@ -10665,7 +10665,7 @@ html {
 
 body {
   background-color: #fff;
-  color: rgba(54, 54, 54, 0.6);
+  color: rgba(54, 54, 54, 1);
   font-family: Arial, Helvetica, Sans-Serif;
   font-size: 14px;
   height: 100%;
@@ -10727,7 +10727,7 @@ ol li {
   height: 100%; }
 
 .main-inner {
-  padding: 25px 0px; }
+  padding: 10px 0px; }
 
 .box-icon {
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -10946,7 +10946,8 @@ ol li {
 
 .card-content .menu li a{
   border-bottom: none;
-  	font-size:16px !important;
+  font-size:16px !important;
+  display: inline-block;
 }
 
 .light-green{
@@ -11021,6 +11022,7 @@ ol li {
 .footer .menu li a:hover{
   color: rgb(125, 125,125);
   font-size: 15px;
+  font-weight: 600;
 }
 .shadow {
 	box-shadow: 2px 2px 11px 1px rgb(213,215,254);
