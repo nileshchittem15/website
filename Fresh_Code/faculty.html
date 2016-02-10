@@ -13,8 +13,27 @@
     <link href="assets/libraries/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libraries/bootstrap-fileinput/fileinput.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" >
+    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" >
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <script src="assets/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#faculty-table').DataTable({
+                "language": {
+                "lengthMenu": "Show _MENU_ faculty per page",
+                "search" :""
+                }
+            });
+            $('.dataTables_length').find('label').css('width', '80px');
+            $('.dataTables_length').addClass('container no-border');
+            $('#faculty-table_filter').addClass('container no-border');
+            $('.dataTables_paginate').addClass('container no-border');
+            $('#faculty-table_filter').find('input').addClass('form-control');
+            $('#faculty-table_filter').find('input').attr('placeholder', 'Search a faculty by name');
+        } );
+    </script>
 
     <title>IIITDM Jabalpur</title>
 </head>
@@ -25,353 +44,335 @@
 <div class="page-wrapper">
     
     <header class="header">
-    <div class="header-wrapper">
-        <div class="container">
-            <div class="header-logo">
-                <a href="index.html">
-                    <img src="assets/img/logo.png" alt="Logo">
-                </a>
-            </div><!-- /.header-logo -->
-        </div>
-        <br>
-        <div class="container full-width">
-            <div class="header-inner">
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="assets/img/logo.png" align="right" alt="Logo">
+                    </a>
+                </div><!-- /.header-logo -->
+            </div>
+            <br>
+            <div class="container bg-blue top-navbar">
+                <div class="header-inner">
+                    <div class="header-content">
+                        <div class="header-bottom">
+                            <ul class="header-nav-primary nav nav-pills collapse navbar-collapse primary-nav">
+                                <li>
+                                    <a href="index.html">Home</i></a>
+                                </li>
 
-                <div class="header-content">
+                                <li >
+                                    <a href="#">Administration <i class="fa fa-chevron-down"></i></a>
 
-                    <div class="header-bottom">
-                        <ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
-    <li>
-        <a href="index.html">Home</i></a>
-    </li>
+                                    <ul class="sub-menu">
+                                        <LI><a href="#" >Administrative Structure</a></LI>
+                                        <LI><a href="#" >Board of Governors</a></LI>
+                                        <LI><a href="#" >Senate</a></LI>
+                                        <LI><a href="#" >Finance Committee</a></LI>
+                                        <LI><a href="#" >Building Works Committee</a></LI>
+                                    </ul>
+                                </li>
 
-    <li >
-        <a href="#">Administration <i class="fa fa-chevron-down"></i></a>
+                                <li>
+                                    <a href="#">Departments <i class="fa fa-chevron-down"></i></a>
 
-        <ul class="sub-menu">
-            <LI><a href="#" >Administrative Structure</a></LI>
-            <LI><a href="#" >Board of Governors</a></LI>
-            <LI><a href="#" >Senate</a></LI>
-            <LI><a href="#" >Finance Committee</a></LI>
-            <LI><a href="#" >Building Works Committee</a></LI>
-        </ul>
-    </li>
+                                    <ul class="sub-menu">
+                                        <LI><a href="http://cse.iiitdmj.ac.in/" target="_blank">Computer Science & Engineering (CSE)</a></LI>
+                                        <LI><a href="#">Electronics & Communication Engineering (ECE)</a></LI>
+                                        <LI><a href="http://design.iiitdmj.ac.in/" target="_blank">Design (Des)</a></LI><LI><a href="http://me.iiitdmj.ac.in/" target="_blank">Mechanical Engineering (ME)</a></LI><LI><a href="http://www.iiitdmj.ac.in/Natural_Sciences/" target="_blank">Natural Sciences (NS)</a></LI>
+                                    </ul>
+                                </li>
 
-    <li>
-        <a href="#">Departments <i class="fa fa-chevron-down"></i></a>
+                                <li >
+                                    <a href="#">Admission <i class="fa fa-chevron-down"></i></a>
 
-        <ul class="sub-menu">
-            <LI><a href="http://cse.iiitdmj.ac.in/" target="_blank">Computer Science & Engineering (CSE)</a></LI>
-            <LI><a href="#">Electronics & Communication Engineering (ECE)</a></LI>
-            <LI><a href="http://design.iiitdmj.ac.in/" target="_blank">Design (Des)</a></LI><LI><a href="http://me.iiitdmj.ac.in/" target="_blank">Mechanical Engineering (ME)</a></LI><LI><a href="http://www.iiitdmj.ac.in/Natural_Sciences/" target="_blank">Natural Sciences (NS)</a></LI>
-        </ul>
-    </li>
+                                    <ul class="sub-menu">
+                                        <LI><a href="#">Undergraduate</a></LI>
+                                        <LI><a href="#">Postgraduate</a></LI>
+                                        <LI><a href="#">Fees Structure</a></LI>
+                                        <LI><a href="#">Useful Information</a></LI>
+                                    </ul>
+                                </li>
 
-    <li >
-        <a href="#">Admission <i class="fa fa-chevron-down"></i></a>
+                                <li >
+                                    <a href="#">Academics <i class="fa fa-chevron-down"></i></a>
 
-        <ul class="sub-menu">
-            <LI><a href="#">Undergraduate</a></LI>
-            <LI><a href="#">Postgraduate</a></LI>
-            <LI><a href="#">Fees Structure</a></LI>
-            <LI><a href="#">Useful Information</a></LI>
-        </ul>
-    </li>
+                                    <ul class="sub-menu">
+                                        <LI><a href="#">Programme</a></LI>
+                                        <LI><a href="#">Discipline</a></LI>
+                                        <LI><a href="#">Research & Development</a></LI>
+                                        <LI><a href="#">Academic Calender</a></LI>
+                                    </ul>
+                                </li>
+                                <li >
+                                    <a href="#">People <i class="fa fa-chevron-down"></i></a>
 
-    <li >
-        <a href="#">Academics <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <LI><a href="#">Faculty</a></LI>
+                                        <LI><a href="#">Research Staff</a></LI>
+                                        <LI><a href="#">Office Administration</a></LI>
+                                        <LI><a href="#">Staff</a></LI>
+                                    </ul>
+                                </li>
+                                <li >
+                                    <a href="#">Students <i class="fa fa-chevron-down"></i></a>
 
-        <ul class="sub-menu">
-            <LI><a href="#">Programme</a></LI>
-            <LI><a href="#">Discipline</a></LI>
-            <LI><a href="#">Research & Development</a></LI>
-            <LI><a href="#">Academic Calender</a></LI>
-        </ul>
-    </li>
-    <li >
-        <a href="#">People <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <LI><a href="#">Gymkhana</a></LI>
+                                        <LI><a href="#">Activities</a></LI>
+                                        <LI><a href="#">Achievments</a></LI>
+                                        <LI><a href="#">Counseling</a></LI>
+                                        <LI><a href="#">Hostels</a></LI>
+                                        <LI><a href="#">Alumni</a></LI>
+                                    </ul>
+                                </li>
+                                <li >
+                                    <a href="#">Research Groups <i class="fa fa-chevron-down"></i></a>
 
-        <ul class="sub-menu">
-            <LI><a href="faculty/faculty.html">Faculty</a></LI>
-            <LI><a href="#">Research Staff</a></LI>
-            <LI><a href="#">Office Administration</a></LI>
-            <LI><a href="#">Staff</a></LI>
-        </ul>
-    </li>
-    <li >
-        <a href="#">Students <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <LI><a href="http://idm.iiitdmj.ac.in/">IDM </a></LI>
+                                        <li><a href="http://ive.iiitdmj.ac.in/" rel="ddsubmenu6">IVE </a></li>
+                                        <LI><a href="http://race.iiitdmj.ac.in/">RACE</a></LI>
+                                        <LI><a href="http://serg.iiitdmj.ac.in/">SERG </a></LI>
+                                        <LI><a href="http://space.iiitdmj.ac.in/">SPACE </a></LI>
+                                        <LI><a href="http://srg.iiitdmj.ac.in/">SRG </a></LI>
+                                        <LI><a href="http://vedant.iiitdmj.ac.in/">VEDANT  </a></LI>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="header-search">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                            </div><!-- /.header-search -->
 
-        <ul class="sub-menu">
-            <LI><a href="#">Gymkhana</a></LI>
-            <LI><a href="#">Activities</a></LI>
-            <LI><a href="#">Achievments</a></LI>
-            <LI><a href="#">Counseling</a></LI>
-            <LI><a href="#">Hostels</a></LI>
-            <LI><a href="#">Alumni</a></LI>
-        </ul>
-    </li>
-    <li >
-        <a href="#">Research Groups <i class="fa fa-chevron-down"></i></a>
-
-        <ul class="sub-menu">
-            <<LI><a href="http://idm.iiitdmj.ac.in/">IDM </a></LI>
-            <li><a href="http://ive.iiitdmj.ac.in/" rel="ddsubmenu6">IVE </a></li>
-            <LI><a href="http://race.iiitdmj.ac.in/">RACE</a></LI>
-            <LI><a href="http://serg.iiitdmj.ac.in/">SERG </a></LI>
-            <LI><a href="http://space.iiitdmj.ac.in/">SPACE </a></LI>
-            <LI><a href="http://srg.iiitdmj.ac.in/">SRG </a></LI>
-            <LI><a href="http://vedant.iiitdmj.ac.in/">VEDANT  </a></LI>
-        </ul>
-    </li>
-</ul>
-<div class="header-search">
-            <input type="text" class="form-control" placeholder="Search for...">
-        </div><!-- /.header-search -->
-
-<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".header-nav-primary">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-</button>
-
-                    </div><!-- /.header-bottom -->
-                </div><!-- /.header-content -->
-            </div><!-- /.header-inner -->
-        </div><!-- /.container -->
-    </div><!-- /.header-wrapper -->
-</header><!-- /.header -->
-
-
-
-
+                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".primary-nav">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div><!-- /.header-bottom -->
+                    </div><!-- /.header-content -->
+                </div><!-- /.header-inner -->
+            </div><!-- /.container -->
+        </div><!-- /.header-wrapper -->
+    </header><!-- /.header -->
     <div class="main">
         <div class="main-inner">
             <div class="container">
-                <div class="content">
-                    
+                <div class="content">           
 
-<h2 class="page-title">
-    Faculty
-</h2><!-- /.page-title -->
+                    <div class="bread-crumb mt10 mb30 pd5">
+                        <a class="pipe-element" href="index.html">Home</a>/
+                        <a class="pipe-element active" href="#">Faculty</a>
+                    </div><!-- bread crumb -->
 
-<div class="cards-row">
-    
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image">
-                    <div class="card-label text-center"><a href="#">Akio Haga</a></div><!-- /.card-row-label -->
-                    <img src="assets/img/faculty_pic/akio.jpg">
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title">Professor</h2>
-                    <div class="card-row-content"><p>Tokyo Institute of Technology</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-    
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image">               
-                    <div class="card-label text-center"><a href="#">Ashish Kundu</a></div><!-- /.card-row-label -->
-                    <img src="assets/img/faculty_pic/AKK_hm1.jpg">
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title">Professor</h2>
-                    <div class="card-row-content"><p>IIIT DM Jabalpur</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-    
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image" data-background-image="assets/img/faculty_pic/lib.png">
-                    
-                
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title"><a href="#">Prof. Akio Haga</a></h2>
-                    <div class="card-row-content"><p>Tokyo Institute of Technology</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-    
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image" data-background-image="assets/img/faculty_pic/lib.png">
-                    
-                
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title"><a href="#">Prof. Akio Haga</a></h2>
-                    <div class="card-row-content"><p>Tokyo Institute of Technology</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-    
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image" data-background-image="assets/img/faculty_pic/lib.png">
-                    
-                
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title"><a href="#">Prof. Akio Haga</a></h2>
-                    <div class="card-row-content"><p>Tokyo Institute of Technology</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-    
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image" data-background-image="assets/img/faculty_pic/lib.png">
-                    
-                
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title"><a href="#">Prof. Akio Haga</a></h2>
-                    <div class="card-row-content"><p>Tokyo Institute of Technology</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-        <div class="card-row">
-            <div class="card-row-inner">
-                <div class="card-row-image" data-background-image="assets/img/faculty_pic/lib.png">
-                    
-                
-                </div><!-- /.card-row-image -->
-
-                <div class="card-row-body">
-                    <h2 class="card-row-title"><a href="#">Prof. Akio Haga</a></h2>
-                    <div class="card-row-content"><p>Tokyo Institute of Technology</p></div><!-- /.card-row-content -->
-                </div><!-- /.card-row-body -->
-
-                <div class="card-row-properties">
-                    <dl>
-                        
-                            <dd>Phone</dd><dt>0762-265420</dt>
-                        
-
-                        
-                            <dd>Fax</dd><dt>1112545</dt>
-                        
-
-                        
-                            <dd>Email</dd><dt>akio@iiitdmj.ac.in</dt>
-                    </dl>
-                </div><!-- /.card-row-properties -->
-            </div><!-- /.card-row-inner -->
-        </div><!-- /.card-row -->
-    
-</div><!-- /.cards-row -->
-
-
-<div class="pager">
-    <ul>
-        <li><a href="#">Prev</a></li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a>2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
-</div><!-- /.pagination -->
-
+                    <div class="fullwidth faculty-list">
+                        <table id="faculty-table" class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="row faculty">
+                                            <div class="col-sm-12">
+                                                <div class="container background-white faculty-info">
+                                                    <div class="row less-margin">
+                                                        <div class="col-sm-12 faculty-name">
+                                                            <h4><a href=""><b>Pramod Kumar Jain</b></a></h4>
+                                                        </div>
+                                                        <div class="col-sm-12 information">
+                                                            <div class="row">
+                                                                <div class="col-sm-2 faculty-pic">
+                                                                    <img src="assets/img/faculty/PKJain-IITR-Photo.JPG">
+                                                                </div>
+                                                                <div class="col-sm-10 data">
+                                                                    <h5 class="faculty-post">Director</h5>
+                                                                    <div class="faculty-description">
+                                                                        <p>CAD/CAM, CAPP; Concurrent Engineering: Design for Manufacture, Design for Assembly, Tolerance Design<br />Manufacturing Systems, Modelling and Simulation, FMS, CMS, RMS, Agent Based Systems, Scheduling<br />Operations Management, Capacity Planning, Loading and Scheduling, Resource Planning</p>
+                                                                        <div class="mt10">
+                                                                                <strong>Phone:</strong>&nbsp;0761-5520398<br>
+                                                                                <strong>Fax:</strong>&nbsp;0761-552241<br>
+                                                                                <strong>Email:</strong>&nbsp;avadhesh@iiitdmj.ac.in
+                                                                            <!-- <div class="col-sm-4 faculty-phone">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-fax">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-email">
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--row-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row faculty">
+                                            <div class="col-sm-12">
+                                                <div class="container background-white faculty-info">
+                                                    <div class="row less-margin">
+                                                        <div class="col-sm-12 faculty-name">
+                                                            <h4><a href=""><b>Avadhesh Kumar Singh</b></a></h4>
+                                                        </div>
+                                                        <div class="col-sm-12 information">
+                                                            <div class="row">
+                                                                <div class="col-sm-2 faculty-pic">
+                                                                    <img src="assets/img/faculty/aks.jpg">
+                                                                </div>
+                                                                <div class="col-sm-10 data">
+                                                                    <h4 class="faculty-post">Faculty</h4>
+                                                                    <div class="faculty-description">
+                                                                        <p>Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.</p>
+                                                                        <div class="mt10">
+                                                                                <strong>Phone:</strong>&nbsp;0761-5520398<br>
+                                                                                <strong>Fax:</strong>&nbsp;0761-552241<br>
+                                                                                <strong>Email:</strong>&nbsp;avadhesh@iiitdmj.ac.in
+                                                                            <!-- <div class="col-sm-4 faculty-phone">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-fax">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-email">
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--row-->
+                                                </div>
+                                            </div>
+                                        </div><!--faculty-row-end-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row faculty">
+                                            <div class="col-sm-12">
+                                                <div class="container background-white faculty-info">
+                                                    <div class="row less-margin">
+                                                        <div class="col-sm-12 faculty-name">
+                                                            <h4><a href=""><b>Ashish Kumar Kundu</b></a></h4>
+                                                        </div>
+                                                        <div class="col-sm-12 information">
+                                                            <div class="row">
+                                                                <div class="col-sm-2 faculty-pic">
+                                                                    <img src="assets/img/faculty/AKK_hm1.jpg">
+                                                                </div>
+                                                                <div class="col-sm-10 data">
+                                                                    <h4 class="faculty-post">Faculty</h4>
+                                                                    <div class="faculty-description">
+                                                                        <p>Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.</p>
+                                                                        <div class="mt10">
+                                                                                <strong>Phone:</strong>&nbsp;0761-5520398<br>
+                                                                                <strong>Fax:</strong>&nbsp;0761-552241<br>
+                                                                                <strong>Email:</strong>&nbsp;avadhesh@iiitdmj.ac.in
+                                                                            <!-- <div class="col-sm-4 faculty-phone">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-fax">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-email">
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--row-->
+                                                </div>
+                                            </div>
+                                        </div><!--faculty-row-end-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row faculty">
+                                            <div class="col-sm-12">
+                                                <div class="container background-white faculty-info">
+                                                    <div class="row less-margin">
+                                                        <div class="col-sm-12 faculty-name">
+                                                            <h4><a href=""><b>Lokendra Balyan</b></a></h4>
+                                                        </div>
+                                                        <div class="col-sm-12 information">
+                                                            <div class="row">
+                                                                <div class="col-sm-2 faculty-pic">
+                                                                    <img src="assets/img/faculty/balyan.jpg">
+                                                                </div>
+                                                                <div class="col-sm-10 data">
+                                                                    <h4 class="faculty-post">Faculty</h4>
+                                                                    <div class="faculty-description">
+                                                                        <p>Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.</p>
+                                                                        <div class="mt10">
+                                                                                <strong>Phone:</strong>&nbsp;0761-5520398<br>
+                                                                                <strong>Fax:</strong>&nbsp;0761-552241<br>
+                                                                                <strong>Email:</strong>&nbsp;avadhesh@iiitdmj.ac.in
+                                                                            <!-- <div class="col-sm-4 faculty-phone">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-fax">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-email">
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--row-->
+                                                </div>
+                                            </div>
+                                        </div><!--faculty-row-end-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row faculty">
+                                            <div class="col-sm-12">
+                                                <div class="container background-white faculty-info">
+                                                    <div class="row less-margin">
+                                                        <div class="col-sm-12 faculty-name">
+                                                            <h4><a href=""><b>Amarnath</b></a></h4>
+                                                        </div>
+                                                        <div class="col-sm-12 information">
+                                                            <div class="row">
+                                                                <div class="col-sm-2 faculty-pic">
+                                                                    <img src="assets/img/faculty/amarnath.jpg">
+                                                                </div>
+                                                                <div class="col-sm-10 data">
+                                                                    <h4 class="faculty-post">Faculty</h4>
+                                                                    <div class="faculty-description">
+                                                                        <p>Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.Lorem ipsum dolor set amit.</p>
+                                                                        <div class="mt10">
+                                                                                <strong>Phone:</strong>&nbsp;0761-5520398<br>
+                                                                                <strong>Fax:</strong>&nbsp;0761-552241<br>
+                                                                                <strong>Email:</strong>&nbsp;avadhesh@iiitdmj.ac.in
+                                                                            <!-- <div class="col-sm-4 faculty-phone">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-fax">
+                                                                            </div>
+                                                                            <div class="col-sm-4 faculty-email">
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--row-->
+                                                </div>
+                                            </div>
+                                        </div><!--faculty-row-end-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div><!-- /.content -->
             </div><!-- /.container -->
@@ -381,22 +382,36 @@
     <footer class="footer">
 
     <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom-right">
-                &copy; IIITDM Jabalpur. Web Support: <a href="#">WEBTEAM</a>.
-            </div><!-- /.footer-bottom-left -->
-
-            <div class="footer-bottom-left">
-                <ul class="nav nav-pills">
-                    <li class="v-line"><a href="#">Home</a></li>
-                    <li class="v-line"><a href="#">Publications</a></li>
-                    <li class="v-line"><a href="#">People</a></li>
-                    <li class="v-line"><a href="#">Facilities</a></li>
-                    <li class="v-line"><a href="#">Site Map</a></li>
-                    <li class="v-line"><a href="#">FTS</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul><!-- /.nav -->
+        <div class="container translucent-white">
+            <div class="col-sm-8 ">
+                <div class="col-sm-4">
+                    <ul class="menu">
+                        <li class="v-line"><a href="#">Home</a></li>
+                        <li class="v-line"><a href="#">Publications</a></li>
+                        <li class="v-line"><a href="#">People</a></li>
+                        <li class="v-line"><a href="#">Facilities</a></li>
+                    </ul><!-- /.nav -->
+                </div>
+                <div class="col-sm-4">
+                    <ul class="menu">
+                        <li class="v-line"><a href="#">Site Map</a></li>
+                        <li class="v-line"><a href="#">FTS</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Web Team</a></li>
+                    </ul><!-- /.nav -->
+                </div>
+                <div class="col-sm-4">
+                    
+                </div>
             </div><!-- /.footer-bottom-right -->
+            <div class="col-sm-4 pull-right" style="color:black; font-size:15px">
+                <strong>Indian Institute of Information Technology Design & Manufacturing Jabalpur</strong><br><br>
+                <p>Dumna Airport Road, Dumna - 482005</p>
+                <p>Phone - +91-076-24852</p>
+                <p>Fax - +91-584-24852</p>
+                <p>Email - admin@iiitdmj.ac.in</p>
+                <!-- <p>&copy; IIITDM Jabalpur. Web Support: <a href="#">WEBTEAM</a>.</p> -->
+            </div><!-- /.footer-bottom-left -->
         </div><!-- /.container -->
     </div>
 </footer><!-- /.footer -->
@@ -431,6 +446,19 @@
 <script type="text/javascript" src="assets/libraries/bootstrap-fileinput/fileinput.min.js"></script>
 
 <script src="assets/js/custom.js" type="text/javascript"></script>
+<script src="assets/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="assets/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/website.js" type="text/javascript"></script>
+<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="assets/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $.extend( true, $.fn.dataTable.defaults, {
+            "searching": true,
+            "ordering": false,
+            "pageLength": 10    
+        } );
+</script>
 
 </body>
 </html>

@@ -2097,10 +2097,10 @@ th {
     padding: 8px;
     line-height: 1.42857;
     vertical-align: top;
-    border-top: 1px solid #ddd; }
+    /*border-top: 1px solid #ddd;*/ }
   .table > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd; }
+    /*border-bottom: 2px solid #ddd;*/ }
   .table > caption + thead > tr:first-child > th,
   .table > caption + thead > tr:first-child > td,
   .table > colgroup + thead > tr:first-child > th,
@@ -7150,7 +7150,7 @@ ul.dropdown-menu li a {
         .header-content .nav > li > a {
           border-radius: 0px;
           color: white;
-          font-size: 15px;
+          font-size: 16px;
           padding: 6px 20px; 
 		  
 		  }
@@ -7197,7 +7197,7 @@ ul.dropdown-menu li a {
               /*color: rgba(54, 54, 54, 0.6);*/
               color: #fff;
               display: block;
-              font-size: 12px;
+              font-size: 13px;
               padding: 10px 20px;
               text-transform: uppercase;
               transition: all 0.15s linear;
@@ -7639,10 +7639,10 @@ h2.widgettitle {
     padding: 0px; }
     .widget .menu li a {
       border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-      color: rgba(54, 54, 54, 1 );
+      color: #363636;
       line-height: 26px;
       display: block;
-      padding: 7px 0px;
+      padding: 5px 0px;
       transition: all 0.15s linear;
 	   font-size:15px !important;
 	}
@@ -8401,13 +8401,16 @@ h2.widgettitle {
   width: 100%; }
 
 .card-content {
-  left: 50%;
-  padding: 0px 30px;
-  padding-top: 30px;
-  position: absolute;
+  /*left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);*/
+  padding: 0px 30px;
+  padding-top: 20px;
+  margin-top: 30px;
+  height: inherit;
+  overflow-y: auto;
+  position: absolute;
   transition: all ease 0.35s;
   width: 100%;
   z-index: 2; }
@@ -8800,9 +8803,11 @@ h2.widgettitle {
     font-size: 12px;
     margin: 7px 0px 30px 0px !important; }
 
+.cards-small{
+  padding-bottom: 40px;
+}
 .card-small {
-  background-color: #fff;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 10px; }
   .card-small:before,
   .card-small:after {
@@ -8814,13 +8819,13 @@ h2.widgettitle {
 .card-small-image {
   float: left; }
   .card-small-image img {
-    width: 80px; }
+    width: 45px; }
 
 .card-small-content {
-  margin-left: 90px; }
+  margin-left: 60px; }
   .card-small-content h3 {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     margin: 0px 0px 0px 0px;
     padding: 0px;
@@ -8828,12 +8833,15 @@ h2.widgettitle {
     text-overflow: ellipsis;
     white-space: nowrap; }
     .card-small-content h3 a {
-      color: #444; }
+      color: #444;
+      float:left; }
   .card-small-content h4 {
-    font-size: 11px;
+    font-size: 12px;
     margin: 5px 0px 0px 0px; }
     .card-small-content h4 a {
-      color: rgba(54, 54, 54, 0.6); }
+      color: rgba(54, 54, 54, 0.6);
+      float: left;
+      text-align: left; }
 
 .card-small-price {
   color: #009f8b;
@@ -10890,7 +10898,7 @@ ol li {
 .no-padding{
   padding-left: 0px;
   padding-right: 0px;
-  padding-top: 25px;
+  padding-top: 0px;
 }
 
 .img-small{
@@ -10946,7 +10954,7 @@ ol li {
 
 .card-content .menu li a{
   border-bottom: none;
-  font-size:16px !important;
+  font-size:15px !important;
   display: inline-block;
 }
 
@@ -10968,17 +10976,17 @@ ol li {
 
 .second-header .nav-pills > li{
   background-color: #356AA0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .second-header .nav-pills > li > a{
-  padding: 10px 15px;
+  padding: 4px 15px;
   border-right: 1px solid white;
 }
 
 .second-header .nav-pills > li:last-child > a{
-  padding: 10px 15px;
+  padding: 4px 15px;
 }
 
 .second-header .nav-pills > li:hover{
@@ -11009,6 +11017,7 @@ ol li {
   background-color: white;
   opacity: 0.7;
   padding: 35px;
+  border: 2px solid #BCB4B4;
 }
 
 .footer .menu li{
@@ -11047,3 +11056,210 @@ ol li {
   color:white !important;
   width: 93% !important;
 }
+
+.marquee {
+    width: inherit;
+    height:inherit;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;   
+}
+.marquee div {
+    position: absolute;
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+.marquee div {
+    transform:translateY(100%);
+}
+@keyframes left-one {
+    0%  {
+        transform:translateY(100%);
+    }
+    10% {
+        transform:translateY(0);
+    }
+    30% {
+        transform:translateY(0);
+    }
+    35% {
+        transform:translateY(0);
+    } 
+    45% {
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateY(-100%);
+    }
+}
+@keyframes left-two {
+    0% {
+        transform:translateY(200%);
+    }
+    35% {
+        transform:translateY(200%);
+    }
+    45%{
+        transform:translateY(0); 
+    }
+    50% {
+        transform:translateY(0);        
+    }
+    65% {
+        transform:translateY(0);        
+    }
+    75% {
+        transform:translateY(-100%);        
+    }
+    100%{
+        transform:translateY(-100%);
+    }
+}
+/*@keyframes left-three {
+    0% {
+        transform:translateY(200%);
+    }
+    65% {
+        transform:translateY(200%);
+    }
+    75% {
+        transform:translateY(0);
+    }
+    85%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(-100%);
+    }
+}*/
+.marquee div:nth-child(1) {
+    animation: left-one 15s ease infinite;
+}
+.marquee div:nth-child(2) {
+    animation: left-two 15s ease infinite;
+}
+
+/*.marquee div:nth-child(3) {
+    animation: left-three 15s ease infinite;
+}*/
+
+
+.faculty-list .container{
+  /*width: 80%;*/
+  border: 2px solid #e3e3e3;
+  border-radius: 5px;
+}
+.faculty-info{
+  padding: 10px;
+  margin: 0px auto;
+}
+.faculty-info img{
+  width: 150px;
+  border: 1px solid #e3e3e3;
+  padding: 3px;
+}
+
+.faculty-name{
+  border-bottom: 2px solid #e3e3e3;
+  margin-bottom: 10px;
+}
+
+.faculty-name>h4
+{
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  border-left: 2px solid #e3e3e3;
+  padding-left: 10px;
+}
+
+.faculty-post{
+  margin: 0px;
+}
+
+.faculty-description{
+  margin-top: 20px;
+}
+
+.less-margin{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.pd5{
+  padding: 5px;
+}
+
+.pipe-element{
+  margin: 5px;
+}
+
+.faculty{
+  margin-bottom: 20px;
+}
+
+.faculty-post
+{
+  color: #0054A8;
+}
+
+.bread-crumb a{
+font-weight: 600;}
+.bread-crumb a:hover{
+  text-decoration: underline;
+}
+.bread-crumb .active{
+  color: rgb(65,65,65);
+  font-style: bold;
+}
+
+.bread-crumb .active:hover{
+  text-decoration: none;
+}
+
+.fixedElement {
+    position:fixed;
+    top:0;
+    width:100% !important;
+    z-index:100;
+}
+
+.width80{
+  width: 80px;
+}
+
+.no-border{
+  border: 0px !important;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#faculty-table_info{
+  display: none;
+}
+
+/*.dataTables_paginate {
+  margin: 30px 0px 20px 0px !important;
+  text-align: center !important; }
+    .paginate_button {
+      border-color: #f7f8f9;
+      border-radius: 20px;
+      margin: 8px;
+      cursor: pointer;
+      background-color: #fff; 
+      color: rgba(54, 54, 54, 0.6) !important;
+      padding: 6px 15px !important;
+      transition: all 0.15s linear !important; }
+      .paginate_button:hover {
+        background-color: #c6af5c !important;
+        color: #fff !important; }
+     .current {
+      background-color: #009f8b !important;
+      border-color: #009f8b !important;
+      color: #fff !important; }
+
+      .disabled{
+        opacity: 0.5;
+        pointer-events: none;
+      }
+*/
+>>>>>>> origin/development
