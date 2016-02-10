@@ -11262,3 +11262,14 @@ font-weight: 600;}
         pointer-events: none;
       }
 */
+
+.webspace{
+  margin-top: 10px;
+}
+.webspace a{
+  color: blue;
+}
+
+.webspace a:hover{
+  text-decoration: underline;
+}
